@@ -123,6 +123,12 @@ text-decoration: none;
      top: 500px;
  }
 
+ .wrapper-p {
+     position: relative;
+     top: 500px;
+	 margin: 0 200px;
+ }
+
 
  header {
    background-color: #fff;
