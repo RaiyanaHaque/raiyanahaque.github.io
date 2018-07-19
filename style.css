@@ -1,0 +1,412 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* main stuff */
+/*HOMEPAGE*/
+
+*{
+margin: 0;
+padding: 0;
+text-decoration: none;
+color: #fff;
+ }
+
+ body {
+   background-color: #111;
+   display: flex;
+   flex-wrap: wrap;
+ }
+
+ .wrapper {
+     margin: 0 auto;
+     width: 1000px;
+     position: relative;
+     top: 500px;
+ }
+
+ .wrapper-p {
+     position: relative;
+     top: 500px;
+	 margin: 0 200px;
+ }
+
+
+ header {
+   background-color: #111;
+   width: 100%;
+   height: 100px;
+ }
+
+ header .header-brand {
+   font-family: 'Abel', sans-serif;
+   font-size: 24px;
+   color: #fff;
+   float: left;
+   text-transform: uppercase;
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+   padding: 30px 20px;
+ }
+
+ header .header-brand:hover {
+ 	 color: pink;
+ }
+
+ header nav ul {
+   display: block;
+   margin: 0 auto;
+ }
+
+ header nav ul li {
+   float: right;
+   list-style: none;
+   padding: 30px 15px;
+   position: relative;
+ }
+
+ header nav ul li a {
+   font-family: 'Abel', sans-serif;
+   float: right;
+   font-size: 18px;
+   color: #fff;
+ }
+
+ header nav ul li a:hover {
+   color: violet;
+ }
+
+ /*INDEX*/
+ /*Font-stuff:
+ font-family: 'Gaegu', cursive;
+ font-family: 'Indie Flower', cursive;
+ font-family: 'Knewave', cursive;
+ font-family: 'Karla', sans-serif;
+ font-family: 'Concert One', cursive;
+ font-family: 'Abel', sans-serif;
+ font-family: 'IBM Plex Sans Condensed', sans-serif;
+ */
+
+
+.index-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 867px;
+  z-index: -1;
+}
+
+.About {
+position: relative;
+top: 414px;
+}
+
+.About h1 {
+  color: #fff;
+  font-family: 'Abel', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.about-p {
+  color: white;
+  padding-top: 10px;
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.project {
+  position: relative;
+  top: 444px;
+}
+
+.project h2 {
+  color: #fff;
+  font-family: 'Abel', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.PN h3 {
+  color: white;
+  padding-top: 30px;
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.PN p {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-size: 15px;
+}
+
+.PN li {
+  color: white;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-size: 15px;
+}
+
+.HG h3 {
+  color: white;
+  padding-top: 30px;
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.HG p {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-size: 15px;
+}
+
+.HG li {
+  color: white;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-size: 15px;
+}
+
+.CC h3 {
+  color: white;
+  padding-top: 30px;
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.CC p {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-size: 15px;
+}
+
+.CC li {
+  color: white;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-size: 15px;
+}
+
+.CC li a {
+  color: violet;
+}
+
+.CC li a:hover {
+  color: blue;
+}
+
+.AM h3 {
+  color: white;
+  padding-top: 30px;
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.AM p {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-size: 15px;
+}
+
+.AM li {
+  color: white;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-size: 15px;
+}
+
+.AM img {
+  padding-top: 20px;
+  width: 100%;
+}
+
+.SB h3 {
+  color: white;
+  padding-top: 30px;
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.SB p {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-size: 15px;
+}
+
+.SB li {
+  color: white;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-size: 15px;
+}
+
+.videowrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0px;
+}
+
+.videowrapper iframe {
+  padding: 10px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+
+/*PROJECTPAGE*/
+
+.project-box {
+    padding: 20px 0;
+}
+
+.img-single {
+    width:450px;
+    height: 440px;
+    margin: 5px 24px;
+    float: left;
+    position: relative;
+}
+
+.img-single img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+}
+
+.img-single:hover {
+   z-index: 1000;
+}
+
+.img-single img:hover {
+    width: 108%;
+    height: 108%;
+    position: absolute;
+    top: -4%;
+    left: -4%;
+}
