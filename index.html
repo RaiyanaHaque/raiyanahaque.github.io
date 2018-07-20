@@ -4,6 +4,7 @@
     <title>Raiyana Haque Portfolio</title>
     <meta charset = "utf-8">
     <meta name="vieport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
@@ -19,11 +20,13 @@
       <nav>
         <ul>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Other</a></li>
           <li><a href="resume.html">Resume</a></li>
           <li><a href="#p-link">Projects</a></li>
         </ul>
       </nav>
       <img class="index-banner" src="WebsiteBanner.png" alt="Banner">
+      <a href="#" class= "back-to-top">Back to Top</a>
     <div class= "wrapper">
       <div class="About">
         <h1>About Me</h1>
@@ -32,6 +35,7 @@
           <iframe src="https://www.youtube.com/embed/Sh-MSzO7Hz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
+
       <div class="project">
         <h2 id = "p-link">Projects!</h2>
         <section class = "PN">
@@ -85,5 +89,31 @@
         </section>
       </div>
     </div>
+
+    <script type="text/javascript">
+    $('body').prepend('<a href="index.html" class= "back-to-top">Back to Top</a>')
+
+    $(window).scroll(function(){
+      if($(window).scrollTop()>500) {
+        $('.back-to-top').fadeIn('slow');
+      } else {
+        $('.back-to-top').fadeOut('slow');
+      }
+    })
+
+    // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentClass.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+    </script>
+
+
+
   </body>
 </html>
