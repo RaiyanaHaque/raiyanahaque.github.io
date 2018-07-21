@@ -213,9 +213,10 @@ top: 414px;
 .about-p {
   color: white;
   padding-top: 10px;
-  font-family: 'Abel', sans-serif;
-  font-size: 20px;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 16px;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .project {
@@ -242,13 +243,13 @@ top: 414px;
   color: white;
   padding-top: 10px;
   padding-bottom: 12px;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
 .PN li {
   color: white;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
@@ -264,13 +265,13 @@ top: 414px;
   color: white;
   padding-top: 10px;
   padding-bottom: 12px;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
 .HG li {
   color: white;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
@@ -286,13 +287,13 @@ top: 414px;
   color: white;
   padding-top: 10px;
   padding-bottom: 12px;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
 .CC li {
   color: white;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
@@ -316,13 +317,13 @@ top: 414px;
   color: white;
   padding-top: 10px;
   padding-bottom: 12px;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
 .AM li {
   color: white;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
@@ -343,13 +344,13 @@ top: 414px;
   color: white;
   padding-top: 10px;
   padding-bottom: 12px;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
 .SB li {
   color: white;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
@@ -371,6 +372,17 @@ top: 414px;
   width: 100%;
 }
 
+/*INDEX*/
+/*Font-stuff:
+font-family: 'Gaegu', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Knewave', cursive;
+font-family: 'Karla', sans-serif;
+font-family: 'Concert One', cursive;
+font-family: 'Abel', sans-serif;
+font-family: 'IBM Plex Sans Condensed', sans-serif;
+*/
+
 .back-to-top {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
@@ -379,8 +391,9 @@ top: 414px;
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: red; /* Set a background color */
-    color: white; /* Text color */
+    background-color: #644cc6; /* Set a background color */
+    color: black; /* Text color */
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
