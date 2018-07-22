@@ -150,7 +150,7 @@ color: #fff;
  }
 
  header .header-brand:hover {
- 	 color: pink;
+ 	 color: cyan;
  }
 
  header nav ul {
@@ -386,7 +386,7 @@ font-family: 'IBM Plex Sans Condensed', sans-serif;
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: #644cc6; /* Set a background color */
+    background-color: cyan; /* Set a background color */
     color: black; /* Text color */
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     cursor: pointer; /* Add a mouse pointer on hover */
@@ -395,6 +395,4 @@ font-family: 'IBM Plex Sans Condensed', sans-serif;
     font-size: 18px; /* Increase font size */
 }
 
-.back-to-top: hover {
-  color: green;
-}
+
