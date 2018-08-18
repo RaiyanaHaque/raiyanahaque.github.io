@@ -112,7 +112,7 @@ color: #fff;
  }
 
  body {
-   background-color: #111;
+   background-color: #fff;
    display: flex;
    flex-wrap: wrap;
  }
@@ -185,6 +185,7 @@ color: #fff;
  font-family: 'Concert One', cursive;
  font-family: 'Abel', sans-serif;
  font-family: 'IBM Plex Sans Condensed', sans-serif;
+ font-family: 'Fira Sans Condensed', sans-serif;
  */
 
 
@@ -200,16 +201,18 @@ color: #fff;
 
 .About {
 position: relative;
+top: 140px;
 }
 
 .a-banner {
   width: 100%;
+
 }
 
 .about-p {
-  color: white;
+  color: #111;
   padding-top: 10px;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 16px;
   text-align: center;
   padding-bottom: 10px;
@@ -217,7 +220,8 @@ position: relative;
 
 .project {
   position: relative;
-  top: 24px;
+  top: 170px;
+  left: 10px;
 }
 
 #p-link {
@@ -227,7 +231,7 @@ position: relative;
 
 
 .PN h3 {
-  color: white;
+  color: #111;
   padding-top: 30px;
   font-family: 'Abel', sans-serif;
   font-size: 20px;
@@ -235,21 +239,21 @@ position: relative;
 }
 
 .PN p {
-  color: white;
+  color: #111;
   padding-top: 10px;
   padding-bottom: 12px;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
 .PN li {
-  color: white;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  color: #111;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
 .HG h3 {
-  color: white;
+  color: #111;
   padding-top: 30px;
   font-family: 'Abel', sans-serif;
   font-size: 20px;
@@ -257,21 +261,21 @@ position: relative;
 }
 
 .HG p {
-  color: white;
+  color: #111;
   padding-top: 10px;
   padding-bottom: 12px;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
 .HG li {
-  color: white;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  color: #111;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
 .CC h3 {
-  color: white;
+  color: #111;
   padding-top: 30px;
   font-family: 'Abel', sans-serif;
   font-size: 20px;
@@ -279,29 +283,29 @@ position: relative;
 }
 
 .CC p {
-  color: white;
+  color:#111;
   padding-top: 10px;
   padding-bottom: 12px;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
 .CC li {
-  color: white;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  color: #111;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
 .CC li a {
-  color: violet;
+  color: cyan;
 }
 
 .CC li a:hover {
-  color: blue;
+  color: pink;
 }
 
 .AM h3 {
-  color: white;
+  color: #111;
   padding-top: 30px;
   font-family: 'Abel', sans-serif;
   font-size: 20px;
@@ -309,16 +313,16 @@ position: relative;
 }
 
 .AM p {
-  color: white;
+  color: #111;
   padding-top: 10px;
   padding-bottom: 12px;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
 .AM li {
-  color: white;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  color: #111;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
@@ -328,7 +332,7 @@ position: relative;
 }
 
 .SB h3 {
-  color: white;
+  color: #111;
   padding-top: 30px;
   font-family: 'Abel', sans-serif;
   font-size: 20px;
@@ -336,16 +340,16 @@ position: relative;
 }
 
 .SB p {
-  color: white;
+  color: #111;
   padding-top: 10px;
   padding-bottom: 12px;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
 .SB li {
-  color: white;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  color: #111;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 15px;
 }
 
@@ -376,6 +380,7 @@ font-family: 'Karla', sans-serif;
 font-family: 'Concert One', cursive;
 font-family: 'Abel', sans-serif;
 font-family: 'IBM Plex Sans Condensed', sans-serif;
+font-family: 'Fira Sans Condensed', sans-serif;
 */
 
 .back-to-top {
@@ -386,13 +391,11 @@ font-family: 'IBM Plex Sans Condensed', sans-serif;
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: cyan; /* Set a background color */
+    background-color: pink; /* Set a background color */
     color: black; /* Text color */
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-family: 'Fira Sans Condensed', sans-serif;
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
     font-size: 18px; /* Increase font size */
 }
-
-
