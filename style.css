@@ -153,6 +153,7 @@ font-family: 'Montserrat', sans-serif;
      top: 50px;
  }
 
+
  .wrapper-p {
      position: relative;
      top: 500px;
@@ -168,7 +169,7 @@ font-family: 'Montserrat', sans-serif;
 .pro-container h3 {
   color: #111;
   font-family: 'Karla', sans-serif;
-  font-weight: 1000;
+  font-weight: 900;
   text-align: center;
   padding-bottom: 18px;
   text-decoration: underline;
@@ -185,41 +186,97 @@ font-family: 'Montserrat', sans-serif;
   color: #111;
   font-family: 'Karla', sans-serif;
   font-weight: 600;
-  padding-top: 10px;
 }
 
 .pro-container li a {
-  color: #eb5963;
+  color: black;
+}
+.game-titles {
+    width: 100%;
+    height: 100px;
+    flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    align-content: space-between;
+}
+.game-titles li{
+    display: flex;
+    padding: 20px;
+    border: 5px solid #eb5963;
+    margin-right: 10px;
+}
+
+.game-titles li a:hover {
+    color: #6e88ad;
+}
+
+.title-intro {
+    align-content: center;
+    padding-bottom: 10px;
+}
+
+.title-intro p {
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    font-weight: 900;
+    text-decoration-color: #111111;
+}
+
+.b-proj{
+    align-content: center;
+    text-decoration-color: #111111;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    font-weight: 900;
+}
+
+.b-proj a:hover {
+    color: #eb5963;
 }
 
 .projectnova {
-  width: 600px;
-  padding-right: 50px;
+    width: 100%;
+  justify-content: center;
 }
 
 .horrorgame {
-  width: 600px;
-  padding-top: 30px;
+    width: 100%;
+    justify-content: center;
 }
 
 .doggo {
-  width: 600px;
+    width: 100%;
+    justify-content: center;
 }
 
 .arcane {
-  padding-top: 28px;
-  width: 600px;
+    width: 100%;
+    justify-content: center;
 }
 
 .arcane img {
   padding-top: 12px;
   width: 600px;
-
+    margin-left: 290px;
 }
 
 .ball {
-  padding-top: 28px;
-  width: 600px;
+    width: 100%;
+    justify-content: center;
 }
 
 
