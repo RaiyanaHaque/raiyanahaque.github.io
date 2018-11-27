@@ -162,6 +162,40 @@ font-family: 'Montserrat', sans-serif;
 
 /*<------ projects -------->*/
 
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg-video #player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+}
+
+.bg-video .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.Showreel {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
 .pro-container {
   display: flex;
 }
@@ -215,6 +249,7 @@ font-family: 'Montserrat', sans-serif;
     display: flex;
     padding: 20px;
     border: 5px solid #eb5963;
+    background-color: #eb5963;
     margin-right: 10px;
 }
 
