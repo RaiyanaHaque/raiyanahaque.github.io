@@ -116,7 +116,6 @@ font-family: 'Montserrat', sans-serif;
 
 .social-container li {
   list-style: none;
-  margine: 10px 30px;
   display: inline-flex;
   font-size: 50px;
   transition: .5s;
@@ -173,7 +172,8 @@ font-family: 'Montserrat', sans-serif;
 .bg-video #player {
    display: flex;
   justify-content: center;
-  padding-top: 80px;
+  padding-top: 40px;
+  padding-bottom: 30px;
    width: 853px;
 height:  480px;
 
