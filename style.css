@@ -194,7 +194,7 @@ font-family: 'Montserrat', sans-serif;
 .bg-video #player {
    display: flex;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 100px;
   padding-bottom: 30px;
    width: 853px;
 height:  480px;
@@ -216,6 +216,7 @@ height:  480px;
 }
 .pro-container {
   display: flex;
+  flex-flow: row wrap;
 }
 
 .pro-container h3 {
@@ -238,6 +239,8 @@ height:  480px;
   color: #111;
   font-family: 'Karla', sans-serif;
   font-weight: 600;
+  flex-flow: row wrap;
+  padding-top: 30px;
 }
 
 .pro-container li a {
@@ -269,6 +272,7 @@ height:  480px;
     border: 5px solid #eb5963;
     background-color: #eb5963;
     margin-right: 10px;
+    margin-top: 10px;
 }
 
 .game-titles li a:hover {
