@@ -1,387 +1,285 @@
 
 /* main stuff */
 /*HOMEPAGE*/
-
 *{
 margin: 0;
 padding: 0;
 text-decoration: none;
-color: #fff;
+color: #f2f5ea;
  }
 
 body, html {
   height: 100%;
-}
-
-.nav-container {
-  width: 100%;
-  margin: 0 auto;
-  height: 100px;
-  border-bottom: 1px solid #e7e7e7;
-  background-color: #d0e5ea;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-
-}
-
-.nav-container ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-}
-
-.nav-container li {
-  padding: 10px;
-}
-
-.nav-container li a {
-  font-family: 'Abel', sans-serif;
-  float: right;
-  font-size: 18px;
-  color: #6e88ad;
-}
-
-.nav-container li a:hover {
-  color: #eb5963;
-}
-
-.bg-container {
-  display: flex;
-  background-image: url("Mainpage.png");
-  width: 100%;
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  cursor:none;
 }
 
 body {
-  background-color: #aac0cd;
+  background-color: #1a1919;
+  margin: 0;
+  padding: 0;
 }
 
-.about-container {
-display: flex;
-width: 100%;
-justify-content: space-between;
-flex-direction: row;
-align-items: center;
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: #c34e51;
+}
+
+ main {
+    margin-left: 10rem;
+    padding: 2rem;
+     width: 1200px;
+ }
+
+ .cursor{
+   position: absolute;
+   background: white;
+   width: 8px;
+   height: 8px;
+   border-radius: 100%;
+   z-index: 1;
+   transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+   0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+   user-select: none;
+   pointer-events: none;
+   transform: scale(0.8);
+ }
+
+ .cursor::before {
+   content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-image: url("http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    opacity: 0;
+ }
+
+ .cursor.active {
+    opacity: 1;
+    transform: scale(12);
+}
+
+.cursor.active::before {
+    opacity: 1;
+}
+
+.cursor-follower {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    z-index: 1;
+    transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    transform: translate(4px, 4px);
+}
+
+.cursor-follower.active {
+    opacity: 0.3;
+    transform: scale(0);
+}
+
+
+/************** NAVIGATION ******************/
+
+.nav-container {
+ position: fixed;
+ background-color: #c34e51;
+ transition: width 200ms ease;
 
 }
 
-.p-img {
-  width: 200px;
-  height: 200px;
-}
-
-.about-container p {
-  color: black;
-  padding-left: 40px;
-  font-size: 18px;
-  font-family: 'Karla', sans-serif;
-  font-weight: bold;
-}
-
-/*Font-stuff:
-font-family: 'Gaegu', cursive;
-font-family: 'Indie Flower', cursive;
-font-family: 'Knewave', cursive;
-font-family: 'Karla', sans-serif;
-font-family: 'Concert One', cursive;
-font-family: 'Abel', sans-serif;
-font-family: 'IBM Plex Sans Condensed', sans-serif;
-font-family: 'Fira Sans Condensed', sans-serif;
-font-family: 'Montserrat', sans-serif;
-*/
-
-.social-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-}
-
-.social-container li {
+.nav-content {
   list-style: none;
-  display: inline-flex;
-  font-size: 50px;
-  transition: .5s;
-  padding: 0px 20px;
-}
-
-.social-container li:hover {
-  color: #eb5963;
-  transition: .5s;
-}
-
-.social-container2 {
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 80px 0px ;
-
-}
-
-.social-container2 li {
-  list-style: none;
-  display: inline-flex;
-  font-size: 50px;
-  transition: .5s;
-  padding: 0px 20px;
-}
-
-.social-container2 li:hover {
-  color: #eb5963;
-  transition: .5s;
-}
-
-
-.videowrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0px;
-}
-
-.videowrapper iframe {
-  padding: 10px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: red;
+  background-color: #993d40;
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
   width: 100%;
 }
 
- .wrapper {
-     margin: 0 auto;
-     width: 1200px;
-     position: relative;
-     top: 50px;
- }
+.logo i {
+  transform: rotate(0deg);
+  transition: transform 600ms;
+}
 
+.nav-container:hover .logo i {
+  transform: rotate(-180deg);
+}
 
- .wrapper-p {
-     position: relative;
-     top: 500px;
-	 margin: 0 200px;
- }
+.nav-item {
+  width: 100%;
+}
 
-/*<------ projects -------->*/
-
-.bg-video {
+.nav-link {
   display: flex;
-  justify-content: center;
-  overflow: hidden;
-
-  z-index: -1;
+  align-items: center;
+  height: 4rem;
+  color: black;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 600ms;
 }
 
-.bg-video #player {
-   display: flex;
-  justify-content: center;
-  padding-top: 100px;
-  padding-bottom: 30px;
-   width: 853px;
-height:  480px;
-
-  z-index: -2;
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background-color: #993d40;
+  color: #f4f0f1;
 }
 
-/*.bg-video .overlay {
-  display: flex;
-  justify-content: center;
-  z-index: 1;
-} */
-
-.Showreel {
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-}
-.pro-container {
-  display: flex;
-  flex-flow: row wrap;
+.link-text {
+  display: none;
+  margin-left: 1rem;
 }
 
-.pro-container h3 {
-  color: #111;
-  font-family: 'Karla', sans-serif;
-  font-weight: 900;
-  text-align: center;
-  padding-bottom: 18px;
-  text-decoration: underline;
-  text-decoration-style: double;
-}
-
-.pro-container p {
-  color: #111;
-  font-family: 'Fredoka One', cursive;;
-
-}
-
-.pro-container li {
-  color: #111;
-  font-family: 'Fredoka One', cursive;;
-  flex-flow: row wrap;
-  padding-top: 30px;
-}
-
-.pro-container li a {
+.nav-link i {
+  min-width: 1.5rem;
+  margin: 0 1.5rem;
   color: black;
 }
-.game-titles {
-    width: 100%;
-    height: 100px;
-    flex-direction: row;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    align-content: space-between;
-}
-.game-titles li{
-    display: flex;
-    padding: 20px;
-    margin-right: 10px;
-    margin-top: 10px;
 
-    border:4px solid #ebb7b7; -webkit-border-radius: 5px; -moz-border-radius: 3px;border-radius: 3px; text-shadow: -1px -1px 0 rgba(0,0,0,0.3); color: #FFFFFF;
- background-color: #f7e3e3; background-image: -webkit-gradient(linear, left top, left bottom, from(#f7e3e3), to(#ffd7d7));
- background-image: -webkit-linear-gradient(top, #f7e3e3, #ffd7d7);
- background-image: -moz-linear-gradient(top, #f7e3e3, #ffd7d7);
- background-image: -ms-linear-gradient(top, #f7e3e3, #ffd7d7);
- background-image: -o-linear-gradient(top, #f7e3e3, #ffd7d7);
- background-image: linear-gradient(to bottom, #f7e3e3, #ffd7d7);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f7e3e3, endColorstr=#ffd7d7); 
+/********* PAGE INTRO *************/
 
- /*border:4px solid #96f0ff; -webkit-border-radius: 5px; -moz-border-radius: 3px;border-radius: 3px; text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
- background-color: #cef8ff; background-image: -webkit-gradient(linear, left top, left bottom, from(#cef8ff), to(#7fe0f8));
- background-image: -webkit-linear-gradient(top, #cef8ff, #7fe0f8);
- background-image: -moz-linear-gradient(top, #cef8ff, #7fe0f8);
- background-image: -ms-linear-gradient(top, #cef8ff, #7fe0f8);
- background-image: -o-linear-gradient(top, #cef8ff, #7fe0f8);
- background-image: linear-gradient(to bottom, #cef8ff, #7fe0f8);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#cef8ff, endColorstr=#7fe0f8); */
+
+
+
+/********** PROJECTS *****************/
+
+.grid {
+padding: 1rem;
 }
 
-.game-titles li a:hover {
-    color: #6e88ad;
+.grid-inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
 }
 
-.title-intro {
-    align-content: center;
-    padding-bottom: 10px;
+.item {
+  flex: 1 1 100%;
+  padding: 0.5rem;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
 }
 
-.title-intro p {
-    text-align: center;
-    font-family: 'Karla', sans-serif;
-    font-weight: 900;
-    text-decoration-color: #111111;
+.item a {
+    max-width: 360px;
+    opacity: 0.4;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+    transform-origin: 90% center;
 }
 
-.b-proj{
-    align-content: center;
-    text-decoration-color: #111111;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    text-align: center;
-    font-family: 'Karla', sans-serif;
-    font-weight: 900;
+.item:hover .item-inner {
+    transform: translateX(-1.75rem);
 }
 
-.b-proj a:hover {
-    color: #eb5963;
+.item:hover a {
+    opacity: 0.8;
+    transform: scale(1.2);
 }
 
-.projectnova {
-    width: 100%;
+.item-inner {
+  background-size: cover;
+  background-image: url("PeckNRun01.png");
+  padding: calc(100% / (16/9));
+}
+
+.item:nth-child(2) .item-inner{
+  background-image: url("Cooper01.png");
+}
+
+.item:nth-child(3) .item-inner{
+  background-image: url("Gunforge01.png");
+}
+
+.item:nth-child(4) .item-inner{
+  background-image: url("WarsRuin01.jpg");
+}
+
+.item:nth-child(5) .item-inner{
+  background-image: url("PN01.png");
+}
+
+
+/********** SMALL SCREENS ************/
+
+@media only screen and (max-width: 600px) {
+
+.nav-container {
+  bottom: 0;
+  width: 100vw;
+  height: 4rem;
+}
+
+.logo {
+  display: none;
+}
+
+.nav-content {
+  flex-direction: row;
+}
+
+.nav-link {
   justify-content: center;
 }
 
-.projectnova h3 {
-  font-family: 'Karla', sans-serif;
+main {
+margin: 0; }
 }
 
-.horrorgame {
-    width: 100%;
-    justify-content: center;
+@media screen and (min-width: 480px){
+  .item{
+    flex: 1 1 50%;
+  }
 }
 
-.doggo {
-    width: 100%;
-    justify-content: center;
+/********** LARGE SCREENS ************/
+@media only screen and (min-width: 600px) {
+.nav-container {
+  top: 0;
+  width: 4rem;
+  height: 100vh;
 }
 
-.arcane {
-    width: 100%;
-    justify-content: center;
+.nav-container:hover {
+  width: 10rem;
 }
 
-.arcane img {
-  padding-top: 12px;
-  width: 600px;
-    margin-left: 290px;
+.nav-container:hover .link-text {
+  display: block;
+}
 }
 
-.ball {
-    width: 100%;
-    justify-content: center;
-}
-
-
-
-/*INDEX*/
-/*Font-stuff:
-font-family: 'Fredoka One', cursive;
-font-family: 'Gaegu', cursive;
-font-family: 'Indie Flower', cursive;
-font-family: 'Knewave', cursive;
-font-family: 'Karla', sans-serif;
-font-family: 'Concert One', cursive;
-font-family: 'Abel', sans-serif;
-font-family: 'IBM Plex Sans Condensed', sans-serif;
-font-family: 'Fira Sans Condensed', sans-serif;
-font-family: 'Montserrat', sans-serif;
-*/
-
-.back-to-top {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: pink; /* Set a background color */
-    color: black; /* Text color */
-    font-family: 'Fira Sans Condensed', sans-serif;
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+@media screen and (min-width: 980px){
+  .item{
+    flex: 1 1 25%;
+  }
 }
