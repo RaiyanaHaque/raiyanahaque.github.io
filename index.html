@@ -6,7 +6,8 @@
     <meta name="vieport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-    <link rel = "stylesheet" href="preloadStyle.css">
+    <link rel = "stylesheet" href="style.css">
+		<link rel = "preload" href="preloadStyle.css">
     <script src="pace.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
     <link rel = "reset" href="reset.css">
@@ -25,10 +26,149 @@
 
   </head>
 
-<body>
 
-<h1 class="continue"> <a href="home.html">Continue </a></h1>
+  <body>
 
+    <div class="cursor"> </div>
+    <div class="cursor-follower"> </div>
+
+    <nav class = "nav-container">
+      <ul class = "nav-content">
+        <li class = "logo">
+          <a href = "#" class = "nav-link">
+            <span class = "link-text"> RH </span>
+            <i class="fas fa-terminal"></i>
+        </a>
+      </li>
+        <li class = "nav-item">
+          <a href = "#" class = "nav-link">
+            <i class="fas fa-user"></i>
+          <span class = "link-text"> About </span>
+        </a>
+      </li>
+
+        <li class = "nav-item">
+           <a href = "#" class = "nav-link">
+            <i class="fas fa-heart"></i>
+             <span class = "link-text"> Projects </span>
+           </a>
+         </li>
+
+
+        <li class = "nav-item">
+           <a href = "#" class = "nav-link">
+            <i class="fas fa-hashtag"></i>
+             <span class = "link-text"> Contact </span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+
+<main>
+
+  <div class="Intro">
+
+    <h1> Raiyana Haque <h1>
+      <h2> Portfolio and Projects </h2>
+      <p> Hi! I am a first year games programming student at Teesside University. This is where you can find some of the projects that I have been part of (some projects don't make it here). You can read more about myself on this page! </p>
+
+  </div>
+
+  <div class="grid">
+    <div class="grid-inner">
+      <div class="item">
+        <a href="indexTest.html" target="_blank">
+        <div class="item-inner"></div>
+      </a>
+      </div>
+      <div class="item">
+        <a href="http://www.google.com" target="_blank">
+        <div class="item-inner"></div>
+      </a>
+      </div>
+      <div class="item">
+        <a href="http://www.google.com" target="_blank">
+        <div class="item-inner"></div>
+      </a>
+      </div>
+      <div class="item">
+        <a href="http://www.google.com" target="_blank">
+        <div class="item-inner"></div>
+      </a>
+      </div>
+      <div class="item">
+        <a href="http://www.google.com" target="_blank">
+        <div class="item-inner"></div>
+      </a>
+      </div>
+      <div class="item">
+        <a href="http://www.google.com" target="_blank">
+        <div class="item-inner"></div>
+      </a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</main>
+
+
+
+
+
+
+</section>
+
+<script>
+            var cursor = $(".cursor"),
+                follower = $(".cursor-follower");
+
+            var posX = 0,
+                posY = 0,
+                mouseX = 0,
+                mouseY = 0;
+
+            TweenMax.to({}, 0.016, {
+                repeat: -1,
+                onRepeat: function() {
+                    posX += (mouseX - posX) / 9;
+                    posY += (mouseY - posY) / 9;
+
+                    TweenMax.set(follower, {
+                        css: {
+                            left: posX - 20,
+                            top: posY - 20
+                        }
+                    });
+
+                    TweenMax.set(cursor, {
+                        css: {
+                            left: mouseX,
+                            top: mouseY
+                        }
+                    });
+                }
+            });
+
+            $(document).on("mousemove", function(e) {
+                mouseX = e.pageX;
+                mouseY = e.pageY;
+            });
+
+            $(".item a").on("mouseenter", function() {
+                cursor.addClass("active");
+                follower.addClass("active");
+            });
+
+            $(".item a").on("mouseleave", function() {
+                cursor.removeClass("active");
+                follower.removeClass("active");
+            });
+        </script>
   </body>
 
 </html>
