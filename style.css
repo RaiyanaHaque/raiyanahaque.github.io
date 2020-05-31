@@ -37,7 +37,18 @@ main {
 }
 
 
-
+#ball {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: 1px solid grey;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin: -10px 0 0 -10px;
+    pointer-events: none;
+}
 
 .overlay {
     width: 100%;
@@ -162,59 +173,59 @@ main {
 
 /********** PROJECTS *****************/
 
+.project-area {
+    margin: .5vw;
+    font-size: 0;
+    display: -ms-flexbox;
+    -ms-flexbox-wrap: wrap;
+    -ms-flexbox-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: -webkit-box;
+    display: flex;
+}
+
+.item-img {
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    width: 200px;
+    margin: .5vw;
+}
+
+.item-img img {
+    width: 100%;
+    height: auto;
+}
 
 .grid {
     padding: 1rem;
 }
 
 .grid-inner {
+    align-content: center;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    flex-flow: row wrap;
     margin: 0 -0.5rem;
 }
 
 .item {
     flex: 1 1 100%;
-    padding: 0.5rem;
-    transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+    padding: 2.5rem;
 }
 
-.item a {
-    max-width: 360px;
+.item:hover .item-inner {
     opacity: 0.4;
     transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
     transform-origin: 90% center;
 }
 
-.item:hover .item-inner {
-    transform: translateX(-1.75rem);
-}
-
-.item:hover a {
-    opacity: 0.8;
-    transform: scale(1.2);
-}
 
 .item-inner {
     background-size: cover;
-    background-image: url("PeckNRun01.png");
     padding: calc(100% / (16/9));
-}
-
-.item:nth-child(2) .item-inner {
-    background-image: url("Cooper01.png");
-}
-
-.item:nth-child(3) .item-inner {
-    background-image: url("Gunforge01.png");
-}
-
-.item:nth-child(4) .item-inner {
-    background-image: url("WarsRuin01.jpg");
-}
-
-.item:nth-child(5) .item-inner {
-    background-image: url("PN01.png");
 }
 
 
@@ -245,9 +256,13 @@ main {
     }
 }
 
-@media screen and (min-width: 480px) {
-    .item {
-        flex: 1 1 50%;
+@media screen and (max-width: 400px) {
+    item-img {
+        margin: 0;
+    }
+
+    project-area {
+        padding: 0;
     }
 }
 

@@ -26,16 +26,18 @@
 </head>
 
 
-<body>
-
-    <div class="overlay">
-        <h1>RAIYANA HAQUE</h1>
-        <h2> PORTFOLIO AND PROJECTS</h2>
-        <ion-icon name="chevron-down-circle-outline"></ion-icon>
-    </div>
-
+<body onload="followMouse();">
 
     <div class="page-content">
+        <div id="ball"></div>
+        <div class="overlay">
+            <h1>RAIYANA HAQUE</h1>
+            <h2> PORTFOLIO AND PROJECTS</h2>
+            <ion-icon name="chevron-down-circle-outline"></ion-icon>
+        </div>
+
+
+
         <nav class="nav-container">
             <ul class="nav-content">
                 <li class="logo">
@@ -77,46 +79,64 @@
 
             </div>
 
-            <div class="grid">
-                <div class="grid-inner">
-                    <div class="item">
-                        <a href="indexTest.html" target="_blank">
-                            <div class="item-inner"></div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="http://www.google.com" target="_blank">
-                            <div class="item-inner"></div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="http://www.google.com" target="_blank">
-                            <div class="item-inner"></div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="http://www.google.com" target="_blank">
-                            <div class="item-inner"></div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="http://www.google.com" target="_blank">
-                            <div class="item-inner"></div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="http://www.google.com" target="_blank">
-                            <div class="item-inner"></div>
-                        </a>
-                    </div>
-                </div>
+            <div class="project-area">
+                <div class="item-img"><img src="WarsRuin01.jpg"></div>
+                <div class="item-img"><img src="WarsRuin01.jpg"></div>
+                <div class="item-img"><img src="WarsRuin01.jpg"></div>
+                <div class="item-img"><img src="WarsRuin01.jpg"></div>
+                <div class="item-img"><img src="WarsRuin01.jpg"></div>
+                <div class="item-img"><img src="WarsRuin01.jpg"></div>
             </div>
+
+
 
 
         </main>
     </div>
 
+    <script type="text/javascript">
+        var $ = document.querySelector.bind(document);
+        var $on = document.addEventListener.bind(document);
 
+        var xmouse, ymouse;
+        $on('mousemove', function(e) {
+            xmouse = e.clientX || e.pageX;
+            ymouse = e.clientY || e.pageY;
+        });
+
+        var ball = $('#ball');
+        var x = void 0,
+            y = void 0,
+            dx = void 0,
+            dy = void 0,
+            tx = 0,
+            ty = 0,
+            key = -1;
+
+
+        var followMouse = function followMouse() {
+            key = requestAnimationFrame(followMouse);
+
+            if (!x || !y) {
+                x = xmouse;
+                y = ymouse;
+            } else {
+                dx = (xmouse - x) * 0.125;
+                dy = (ymouse - y) * 0.125;
+                if (Math.abs(dx) + Math.abs(dy) < 0.1) {
+                    x = xmouse;
+                    y = ymouse;
+                } else {
+                    x += dx;
+                    y += dy;
+                }
+            }
+
+            ball.style.left = x + 'px';
+            ball.style.top = y + 'px';
+        };
+
+    </script>
 
 </body>
 
