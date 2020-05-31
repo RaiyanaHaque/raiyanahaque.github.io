@@ -1,170 +1,158 @@
-
 /* main stuff */
 /*HOMEPAGE*/
-*{
-margin: 0;
-padding: 0;
-text-decoration: none;
-color: #f2f5ea;
- }
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #f2f5ea;
+}
 
-body, html {
-  height: 100%;
-  cursor:none;
+body,
+html {
+    height: 100%;
 }
 
 body {
-  background-color: #1a1919;
-  margin: 0;
-  padding: 0;
+    background-color: #1a1919;
+    margin: 0;
+    padding: 0;
 }
 
 body::-webkit-scrollbar {
-  width: 0.25rem;
+    width: 0.25rem;
 }
 
 body::-webkit-scrollbar-track {
-  background-color: #1e1e24;
+    background-color: #1e1e24;
 }
 
 body::-webkit-scrollbar-thumb {
-background-color: #c34e51;
+    background-color: #c34e51;
 }
 
- main {
+main {
     margin-left: 10rem;
     padding: 2rem;
-     width: 1200px;
- }
+    width: 1200px;
+}
 
- .cursor{
-   position: absolute;
-   background: white;
-   width: 8px;
-   height: 8px;
-   border-radius: 100%;
-   z-index: 1;
-   transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
-   0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
-   user-select: none;
-   pointer-events: none;
-   transform: scale(0.8);
- }
 
- .cursor::before {
-   content: "";
+
+
+.overlay {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    background: #1a1919;
+    top: 0%;
+}
+
+.overlay h1 {
     position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    background-image: url("http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 100%;
-    opacity: 0;
- }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 12px;
+    color: #c34e51;
 
- .cursor.active {
-    opacity: 1;
-    transform: scale(12);
 }
 
-.cursor.active::before {
-    opacity: 1;
-}
-
-.cursor-follower {
+.overlay h2 {
     position: absolute;
-    background: rgba(255, 255, 255, 0.1);
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    z-index: 1;
-    transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
-        0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
-    user-select: none;
-    pointer-events: none;
-    transform: translate(4px, 4px);
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 12px;
+    color: #c34e51;
+
 }
 
-.cursor-follower.active {
-    opacity: 0.3;
-    transform: scale(0);
+.overlay ion-icon {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 90px;
+    font-weight: bolder;
+    letter-spacing: 12px;
+    color: #c34e51;
 }
+
+
 
 
 /************** NAVIGATION ******************/
 
 .nav-container {
- position: fixed;
- background-color: #c34e51;
- transition: width 200ms ease;
+    position: fixed;
+    background-color: #c34e51;
+    transition: width 200ms ease;
 
 }
 
 .nav-content {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 }
 
 .logo {
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: red;
-  background-color: #993d40;
-  font-size: 1.5rem;
-  letter-spacing: 0.3ch;
-  width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: red;
+    background-color: #993d40;
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
 }
 
 .logo i {
-  transform: rotate(0deg);
-  transition: transform 600ms;
+    transform: rotate(0deg);
+    transition: transform 600ms;
 }
 
 .nav-container:hover .logo i {
-  transform: rotate(-180deg);
+    transform: rotate(-180deg);
 }
 
 .nav-item {
-  width: 100%;
+    width: 100%;
 }
 
 .nav-link {
-  display: flex;
-  align-items: center;
-  height: 4rem;
-  color: black;
-  text-decoration: none;
-  filter: grayscale(100%) opacity(0.7);
-  transition: 600ms;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    color: black;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: 600ms;
 }
 
 .nav-link:hover {
-  filter: grayscale(0%) opacity(1);
-  background-color: #993d40;
-  color: #f4f0f1;
+    filter: grayscale(0%) opacity(1);
+    background-color: #993d40;
+    color: #f4f0f1;
 }
 
 .link-text {
-  display: none;
-  margin-left: 1rem;
+    display: none;
+    margin-left: 1rem;
 }
 
 .nav-link i {
-  min-width: 1.5rem;
-  margin: 0 1.5rem;
-  color: black;
+    min-width: 1.5rem;
+    margin: 0 1.5rem;
+    color: black;
 }
 
 /********* PAGE INTRO *************/
@@ -174,20 +162,21 @@ background-color: #c34e51;
 
 /********** PROJECTS *****************/
 
+
 .grid {
-padding: 1rem;
+    padding: 1rem;
 }
 
 .grid-inner {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.5rem;
 }
 
 .item {
-  flex: 1 1 100%;
-  padding: 0.5rem;
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+    flex: 1 1 100%;
+    padding: 0.5rem;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
 }
 
 .item a {
@@ -207,25 +196,25 @@ padding: 1rem;
 }
 
 .item-inner {
-  background-size: cover;
-  background-image: url("PeckNRun01.png");
-  padding: calc(100% / (16/9));
+    background-size: cover;
+    background-image: url("PeckNRun01.png");
+    padding: calc(100% / (16/9));
 }
 
-.item:nth-child(2) .item-inner{
-  background-image: url("Cooper01.png");
+.item:nth-child(2) .item-inner {
+    background-image: url("Cooper01.png");
 }
 
-.item:nth-child(3) .item-inner{
-  background-image: url("Gunforge01.png");
+.item:nth-child(3) .item-inner {
+    background-image: url("Gunforge01.png");
 }
 
-.item:nth-child(4) .item-inner{
-  background-image: url("WarsRuin01.jpg");
+.item:nth-child(4) .item-inner {
+    background-image: url("WarsRuin01.jpg");
 }
 
-.item:nth-child(5) .item-inner{
-  background-image: url("PN01.png");
+.item:nth-child(5) .item-inner {
+    background-image: url("PN01.png");
 }
 
 
@@ -233,53 +222,54 @@ padding: 1rem;
 
 @media only screen and (max-width: 600px) {
 
-.nav-container {
-  bottom: 0;
-  width: 100vw;
-  height: 4rem;
+    .nav-container {
+        bottom: 0;
+        width: 100vw;
+        height: 4rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .nav-content {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    main {
+        margin: 0;
+    }
 }
 
-.logo {
-  display: none;
-}
-
-.nav-content {
-  flex-direction: row;
-}
-
-.nav-link {
-  justify-content: center;
-}
-
-main {
-margin: 0; }
-}
-
-@media screen and (min-width: 480px){
-  .item{
-    flex: 1 1 50%;
-  }
+@media screen and (min-width: 480px) {
+    .item {
+        flex: 1 1 50%;
+    }
 }
 
 /********** LARGE SCREENS ************/
 @media only screen and (min-width: 600px) {
-.nav-container {
-  top: 0;
-  width: 4rem;
-  height: 100vh;
+    .nav-container {
+        top: 0;
+        width: 4rem;
+        height: 100vh;
+    }
+
+    .nav-container:hover {
+        width: 10rem;
+    }
+
+    .nav-container:hover .link-text {
+        display: block;
+    }
 }
 
-.nav-container:hover {
-  width: 10rem;
-}
-
-.nav-container:hover .link-text {
-  display: block;
-}
-}
-
-@media screen and (min-width: 980px){
-  .item{
-    flex: 1 1 25%;
-  }
+@media screen and (min-width: 980px) {
+    .item {
+        flex: 1 1 25%;
+    }
 }
