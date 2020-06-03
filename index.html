@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="vieport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
@@ -29,13 +31,13 @@
 <body onload="followMouse();">
 
     <div class="page-content">
-        <div id="ball"></div>
+
+        <div id="ball"> </div>
         <div class="overlay">
             <h1>RAIYANA HAQUE</h1>
             <h2> PORTFOLIO AND PROJECTS</h2>
             <ion-icon name="chevron-down-circle-outline"></ion-icon>
         </div>
-
 
 
         <nav class="nav-container">
@@ -72,34 +74,63 @@
         </nav>
 
 
-        <main>
 
-            <div class="Intro">
+        <div class=" wrapper">
 
+            <div class="gallery-section">
 
+                <div class="inner-width">
+                    <div class="border">
+                        <div class="gallery">
+
+                            <a href="PN01.png" class="image">
+                                <img src="PN01.png" alt="">
+                            </a>
+                            <a href="WarsRuin01.png" class="image">
+                                <img src="WarsRuin01.png" alt="">
+                            </a>
+                            <a href="Cooper01.png" class="image">
+                                <img src="Cooper01.png" alt="">
+                            </a>
+                            <a href="Gunforge01.png" class="image">
+                                <img src="Gunforge01.png" alt="">
+                            </a>
+                            <a href="PeckNRun01.png" class="image">
+                                <img src="PeckNRun01.png" alt="">
+                            </a>
+                            <a href="PeckNRun01.png" class="image">
+                                <img src="PeckNRun01.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="project-area">
-                <div class="item-img"><img src="PeckNRun01.png"></div>
-                <div class="item-img"><img src="Cooper01.png"></div>
-                <div class="item-img"><img src="WarsRuin01.jpg"></div>
-                <div class="item-img"><img src="Gunforge01.png"></div>
-                <div class="item-img"><img src="PN01.png"></div>
-                <div class="item-img"><img src="WarsRuin01.jpg"></div>
-            </div>
 
 
 
 
-        </main>
+        </div>
     </div>
+    <script type="text/javascript">
+
+        $(".gallery").magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
+
+    </script>
+
 
     <script type="text/javascript">
         var $ = document.querySelector.bind(document);
         var $on = document.addEventListener.bind(document);
 
         var xmouse, ymouse;
-        $on('mousemove', function(e) {
+        $on('mousemove', function (e) {
             xmouse = e.clientX || e.pageX;
             ymouse = e.clientY || e.pageY;
         });
@@ -135,8 +166,9 @@
             ball.style.left = x + 'px';
             ball.style.top = y + 'px';
         };
-
     </script>
+
+
 
 </body>
 
