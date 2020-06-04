@@ -82,12 +82,14 @@
                 <div class="inner-width">
                     <div class="border">
                         <div class="gallery">
-
+                            <a href="img/er-thumbnail.png" class="image">
+                                <img src="img/er-thumbnail.png" alt="">
+                            </a>
                             <a href="index.html" class="image">
                                 <img src="img/PN01.png" alt="">
                             </a>
-                            <a href="img/peckrun.png" class="image">
-                                <img src="img/peckrun.png" alt="">
+                            <a href="img/hg-thumbnail.png" class="image">
+                                <img src="img/hg-thumbnail.png" alt="">
                             </a>
                             <a href="img/Cooper01.png" class="image">
                                 <img src="img/Cooper01.png" alt="">
@@ -95,8 +97,8 @@
                             <a href="img/Gunforge01.png" class="image">
                                 <img src="img/Gunforge01.png" alt="">
                             </a>
-                            <a href="img/peckbanner.png" class="image">
-                                <img src="img/peckbanner.png" alt="">
+                            <a href="img/wr.png" class="image">
+                                <img src="img/wr.png" alt="">
                             </a>
                             <a href="img/peckbanner.png" class="image">
                                 <img src="img/peckbanner.png" alt="">
@@ -113,7 +115,6 @@
         </div>
     </div>
     <script type="text/javascript">
-
         $(".gallery").magnificPopup({
             delegate: 'a',
             type: 'image',
@@ -130,7 +131,7 @@
         var $on = document.addEventListener.bind(document);
 
         var xmouse, ymouse;
-        $on('mousemove', function (e) {
+        $on('mousemove', function(e) {
             xmouse = e.clientX || e.pageX;
             ymouse = e.clientY || e.pageY;
         });
@@ -166,6 +167,7 @@
             ball.style.left = x + 'px';
             ball.style.top = y + 'px';
         };
+
     </script>
 
 
