@@ -235,11 +235,22 @@ main {
     left: 50%;
     color: #000;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #1a1919;
     visibility: hidden;
     opacity: 0;
     transition: opacity .5s, visibility 0s linear .5s;
     z-index: 1;
+}
+
+.popup h2 {
+    font-family: Monument Extended Regular;
+    color: #c34e51;
+}
+
+.popup p {
+    padding-top: 10px;
+    font-family: Mosk Light;
+    color: #3f3b3c;
 }
 
 .popup:target {
