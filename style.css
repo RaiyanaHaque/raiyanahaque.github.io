@@ -10,6 +10,7 @@
 body,
 html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -20,6 +21,16 @@ html {
 @font-face {
     font-family: 'Monument Extended Ultrabold';
     src: url("my-fonts/MonumentExtended-Ultrabold.otf");
+}
+
+@font-face {
+    font-family: 'Mosk Medium';
+    src: url("my-fonts/Mosk Medium 500.ttf");
+}
+
+@font-face {
+    font-family: 'Mosk Light';
+    src: url("my-fonts/Mosk Light 300.ttf");
 }
 
 body {
@@ -162,6 +173,7 @@ main {
     display: flex;
     align-items: center;
     height: 4rem;
+    font-family: monospace;
     color: black;
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
@@ -188,6 +200,28 @@ main {
 /********* PAGE INTRO *************/
 
 
+
+.about h1 {
+    font-family: Monument Extended Ultrabold;
+    font-size: 35px;
+    color: #c34e51;
+    letter-spacing: 2px;
+}
+
+.about p {
+    padding-top: 10px;
+    font-family: Mosk Light;
+    font-size: 22px;
+}
+
+
+.about img {
+    width: 40%;
+    height: 40%;
+    border: 6px solid #c34e51;
+    float: right;
+    margin-left: 10px;
+}
 
 
 /********** PROJECTS *****************/
