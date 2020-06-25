@@ -33,6 +33,31 @@ html {
     src: url("my-fonts/Mosk Light 300.ttf");
 }
 
+@font-face {
+    font-family: 'Funkturm';
+    src: url("my-fonts/._Funkturm.ttf");
+}
+
+@font-face {
+    font-family: 'Chromate';
+    src: url("my-fonts/Chromate-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Hackney';
+    src: url("my-fonts/HackneyPersonalUseOnly.ttf");
+}
+
+@font-face {
+    font-family: 'Apex';
+    src: url("my-fonts/Apex Mk3-ExtraLight.otf");
+}
+
+@font-face {
+    font-family: 'Apex Med';
+    src: url("my-fonts/Apex Mk3-Medium.otf");
+}
+
 body {
     background-color: #1a1919;
     margin: 0;
@@ -210,8 +235,9 @@ main {
 
 .about p {
     padding-top: 10px;
-    font-family: Mosk Light;
-    font-size: 22px;
+    font-family: Hackney;
+    color: #736c6e;
+    font-size: 24px;
 }
 
 
@@ -243,14 +269,15 @@ main {
 }
 
 .popup h2 {
-    font-family: Monument Extended Regular;
+    font-family: Monument Extended Ultrabold;
     color: #c34e51;
 }
 
 .popup p {
     padding-top: 10px;
-    font-family: Mosk Light;
-    color: #3f3b3c;
+    font-family: Hackney;
+    font-size: 25px;
+    color: #736c6e;
 }
 
 .popup:target {
