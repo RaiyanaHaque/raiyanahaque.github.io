@@ -14,6 +14,31 @@ html {
 }
 
 @font-face {
+    font-family: 'Coco';
+    src: url("my-fonts/Cocogoose Pro Light-trial.ttf");
+}
+
+@font-face {
+    font-family: 'Vogue';
+    src: url("my-fonts/Vogue.ttf");
+}
+
+@font-face {
+    font-family: 'Geo';
+    src: url("my-fonts/GeosansLight.ttf");
+}
+
+@font-face {
+    font-family: 'Code';
+    src: url("my-fonts/CODE Light.otf");
+}
+
+@font-face {
+    font-family: 'Code Bold';
+    src: url("my-fonts/CODE Bold.otf");
+}
+
+@font-face {
     font-family: 'Monument Extended Regular';
     src: url("my-fonts/MonumentExtended-Regular.otf");
 }
@@ -235,9 +260,9 @@ main {
 
 .about p {
     padding-top: 10px;
-    font-family: Hackney;
+    font-family: Geo;
     color: #736c6e;
-    font-size: 24px;
+    font-size: 23px;
 }
 
 
@@ -275,8 +300,8 @@ main {
 
 .popup p {
     padding-top: 10px;
-    font-family: Hackney;
-    font-size: 25px;
+    font-family: Geo;
+    font-size: 18px;
     color: #736c6e;
 }
 
